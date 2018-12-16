@@ -1,7 +1,7 @@
 package com.projekt.hotel;
 
 
-import com.projekt.hotel.CustomerRepository.CustomerRepository;
+import com.projekt.hotel.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.projekt.hotel.CustomerRepository;
+package com.projekt.hotel.repository;
 
 import com.projekt.hotel.model.Customer;
 import org.springframework.stereotype.Repository;
