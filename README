@@ -1,2 +1,10 @@
 2HOTELS README FILE
 //CHECK 4 MORE
+
+H2 CONSOLE CONFIG:
+link: /h2-console
+JDBC: jdbc:h2:mem:2hdb
+
+USERS:
+U: admin
+P: pass
