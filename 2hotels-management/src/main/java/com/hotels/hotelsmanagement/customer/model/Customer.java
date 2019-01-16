@@ -1,12 +1,11 @@
 package com.hotels.hotelsmanagement.customer.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "customers")
 public class Customer extends BaseEntity{
+
 
     @Column(name = "first_name")
     private String firstName;
@@ -14,6 +13,9 @@ public class Customer extends BaseEntity{
     private String lastName;
     @Column(name = "pesel")
     private String pesel;
+
+
+
     @Column(name = "date_of_birth")
     private String dateOfBirth;
     @Column(name = "identity_doc_number")
@@ -24,6 +26,24 @@ public class Customer extends BaseEntity{
     private String email;
     @Column(name = "card_number")
     private String cardNumber;
+
+
+
+    public Customer() {
+    }
+
+    @Embedded
+    Adress adress;
+
+    public Adress getAdress() {
+        return adress;
+    }
+
+    public void setAdress(Adress adress) {
+        this.adress = adress;
+    }
+
+
 
     public String getCardNumber() {
         return cardNumber;
