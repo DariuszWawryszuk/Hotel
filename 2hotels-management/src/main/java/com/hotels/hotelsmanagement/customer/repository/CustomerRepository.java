@@ -2,9 +2,12 @@ package com.hotels.hotelsmanagement.customer.repository;
 
 import com.hotels.hotelsmanagement.customer.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-
+import javax.transaction.Transactional;
 
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
@@ -17,6 +20,9 @@ public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     Iterable<Customer> findByLastName(String lastName);
 
-    void delete(Long id);
+    @Transactional
+    @Modifying
+    @Query("UPDATE Customer c SET c.active = false WHERE c.id=:id")
+    void delete(@Param("id") Long id);
 }
 
