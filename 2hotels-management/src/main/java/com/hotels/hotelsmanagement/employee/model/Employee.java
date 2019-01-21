@@ -1,9 +1,7 @@
 package com.hotels.hotelsmanagement.employee.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.Email;
 
 @Table(name = "employees")
 @Entity
@@ -19,11 +17,19 @@ public class Employee {
     @Column(name = "last_name")
     private String lastName;
 
+    @Email
     @Column(name = "email")
     private String email;
 
     @Column(name = "phone_number")
     private int phoneNumber;
+
+    @Embedded
+    private Role role;
+
+    @Column(name = "active")
+    private boolean active;
+
 
     public Employee() {
     }
@@ -66,5 +72,26 @@ public class Employee {
 
     public void setPhoneNumber(int phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
+    }
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    @PrePersist
+    private void preInsertSetActive() {
+        this.active=true;
     }
 }
