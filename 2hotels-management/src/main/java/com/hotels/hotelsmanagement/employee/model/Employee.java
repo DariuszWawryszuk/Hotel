@@ -3,6 +3,8 @@ package com.hotels.hotelsmanagement.employee.model;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
+//h2-console
+
 @Table(name = "employees")
 @Entity
 public class Employee {
@@ -24,7 +26,8 @@ public class Employee {
     @Column(name = "phone_number")
     private int phoneNumber;
 
-    @Embedded
+    @ManyToOne
+    @JoinColumn(name = "role_id")
     private Role role;
 
     @Column(name = "active")
