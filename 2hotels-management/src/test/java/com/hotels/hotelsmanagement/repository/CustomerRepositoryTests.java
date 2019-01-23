@@ -1,7 +1,7 @@
 package com.hotels.hotelsmanagement.repository;
 
 import com.hotels.hotelsmanagement.customer.model.Customer;
-import com.hotels.hotelsmanagement.customer.service.CustomerService;
+import com.hotels.hotelsmanagement.customer.CustomerService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

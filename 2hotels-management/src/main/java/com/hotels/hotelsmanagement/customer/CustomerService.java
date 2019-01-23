@@ -1,7 +1,7 @@
-package com.hotels.hotelsmanagement.customer.service;
+package com.hotels.hotelsmanagement.customer;
 
 import com.hotels.hotelsmanagement.customer.model.Customer;
-import com.hotels.hotelsmanagement.customer.repository.CustomerRepository;
+import com.hotels.hotelsmanagement.customer.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

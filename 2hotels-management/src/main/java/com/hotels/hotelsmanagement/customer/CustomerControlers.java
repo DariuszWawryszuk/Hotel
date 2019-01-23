@@ -1,7 +1,6 @@
-package com.hotels.hotelsmanagement.customer.controllers;
+package com.hotels.hotelsmanagement.customer;
 
 import com.hotels.hotelsmanagement.customer.model.Customer;
-import com.hotels.hotelsmanagement.customer.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

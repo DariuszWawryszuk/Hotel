@@ -1,4 +1,4 @@
-package com.hotels.hotelsmanagement.customer.repository;
+package com.hotels.hotelsmanagement.customer;
 
 import com.hotels.hotelsmanagement.customer.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
