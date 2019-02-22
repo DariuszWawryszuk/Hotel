@@ -3,7 +3,6 @@ package com.hotels.hotelsmanagement.employee.model;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 
-//h2-console
 
 @Table(name = "employees")
 @Entity
@@ -11,7 +10,7 @@ public class Employee {
 
     @Id
     @Column(name = "employee_code")
-    private int employeeCode;
+    private Integer employeeCode;
 
     @Column(name = "first_name")
     private String fistName;
@@ -27,21 +26,20 @@ public class Employee {
     private int phoneNumber;
 
     @ManyToOne
-    @JoinColumn(name = "role_id")
+    @JoinColumn(name = "role")
     private Role role;
 
     @Column(name = "active")
     private boolean active;
 
 
-    public Employee() {
-    }
+    public Employee() {}
 
-    public int getEmployeeCode() {
+    public Integer getEmployeeCode() {
         return employeeCode;
     }
 
-    public void setEmployeeCode(int employeeCode) {
+    public void setEmployeeCode(Integer employeeCode) {
         this.employeeCode = employeeCode;
     }
 
