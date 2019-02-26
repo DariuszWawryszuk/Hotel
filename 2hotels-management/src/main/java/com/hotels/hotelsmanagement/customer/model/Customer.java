@@ -1,6 +1,7 @@
 package com.hotels.hotelsmanagement.customer.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "customers")
@@ -13,8 +14,10 @@ public class Customer extends BaseEntity{
     private String lastName;
     @Column(name = "pesel")
     private String pesel;
-
-
+    @Column(name = "sex")
+    private String sex;
+    @Column(name = "card_number")
+    private String cardNumber;
 
     @Column(name = "date_of_birth")
     private String dateOfBirth;
@@ -24,8 +27,7 @@ public class Customer extends BaseEntity{
     private String identityDocType;
     @Column(name = "email")
     private String email;
-    @Column(name = "card_number")
-    private String cardNumber;
+
 
 
 
