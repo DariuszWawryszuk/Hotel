@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping(value = "/customer")
+@CrossOrigin
 public class CustomerControlers {
 
     @Autowired
@@ -19,12 +20,12 @@ public class CustomerControlers {
         return customerService.findAll();
     }
 
-    @GetMapping("/customer/{id}")
+    @GetMapping("/{id}")
     Optional<Customer> findById (@PathVariable Long id){
         return customerService.findById(id);
     }
 
-    @GetMapping("/customer/search")
+    @GetMapping("/search")
     Iterable<Customer> findAll (@RequestParam(value = "firstName", required = false) String firstName,
                                 @RequestParam(value = "lastName", required = false) String lastName,
                                 @RequestParam(value = "pesel", required = false) String pesel){
@@ -37,12 +38,12 @@ public class CustomerControlers {
         return customerService.save(customer);
     }
 
-    @PutMapping("/customer")
+    @PutMapping("/update")
     Customer update(@RequestBody Customer customer){
         return customerService.save(customer);
     }
 
-    @DeleteMapping("/customer/{id}")
+    @DeleteMapping("/delete/{id}")
     void delete(@PathVariable Long id){
         customerService.delete(id);
     }
