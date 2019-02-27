@@ -3,7 +3,7 @@ package com.hotels.hotelsmanagement.customer.model;
 import javax.persistence.*;
 
 @Embeddable
-public class Adress {
+public class Address {
 
 
     private String street;
